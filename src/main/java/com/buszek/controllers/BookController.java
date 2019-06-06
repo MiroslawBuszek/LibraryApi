@@ -3,9 +3,7 @@ package com.buszek.controllers;
 import com.buszek.models.Book;
 import com.buszek.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,4 +27,13 @@ public class BookController {
         return booksService.findById(id);
     }
 
+    @PostMapping("/books")
+    public Book addBook(@RequestBody Book book) {
+        return booksService.save(book);
+    }
+
+    @PutMapping("/books/{id}")
+    public Book updateBook(@PathVariable long id, @RequestBody Book book) {
+        return booksService.update(id, book);
+    }
 }
