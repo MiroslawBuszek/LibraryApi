@@ -11,37 +11,32 @@ public class Book {
     String title;
     String author;
     String bookNumber;
+    String publisher;
+    String typeBook;
 
+    public void update(Book other) {
 
-    public Long getId() {
-        return id;
-    }
+        if (other != null) {
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+            if (other.getBookNumber() != null) {
+                bookNumber = other.getBookNumber();
+            }
 
-    public String getTitle() {
-        return title;
-    }
+            else if (other.getTitle() != null) {
+                title = other.getTitle();
+            }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+            else if (other.getAuthor() != null) {
+                author = other.getAuthor();
+            }
 
-    public String getAuthor() {
-        return author;
-    }
+            else if (other.getPublisher() != null) {
+                publisher = other.getPublisher();
+            }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getBookNumber() {
-        return bookNumber;
-    }
-
-    public void setBookNumber(String bookNumber) {
-        this.bookNumber = bookNumber;
+            else if (other.getTypeBook() != null) {
+                typeBook = other.getTypeBook();
+            }
+        }
     }
 }
