@@ -1,10 +1,8 @@
 package com.buszek.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 public class Book {
 
     Long id;
