@@ -17,12 +17,12 @@ public class StubUserRepository implements UserService {
     }
 
     @Override
-    public List<User> findAllUser () {
+    public List<User> findAllUser() {
         return new ArrayList<>(users.values());
     }
 
     @Override
-    public User findUserById (long id) {
+    public User findUserById(long id) {
         return users.get(id);
     }
 
@@ -34,7 +34,7 @@ public class StubUserRepository implements UserService {
     }
 
     @Override
-    public User updateUser (long id, User user) {
+    public User updateUser(long id, User user) {
 
         final User userToUpdate = findUserById(id);
 

@@ -13,7 +13,7 @@ public class User {
     String nick;
     String email;
 
-    public void updateUser (User other) {
+    public void updateUser(User other) {
 
         if (other != null) {
 

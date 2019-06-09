@@ -14,27 +14,19 @@ public class Book {
     String publisher;
     String typeBook;
 
-    public void updateBook (Book other) {
+    public void updateBook(Book other) {
 
         if (other != null) {
 
             if (other.getBookNumber() != null) {
                 bookNumber = other.getBookNumber();
-            }
-
-            else if (other.getTitle() != null) {
+            } else if (other.getTitle() != null) {
                 title = other.getTitle();
-            }
-
-            else if (other.getAuthor() != null) {
+            } else if (other.getAuthor() != null) {
                 author = other.getAuthor();
-            }
-
-            else if (other.getPublisher() != null) {
+            } else if (other.getPublisher() != null) {
                 publisher = other.getPublisher();
-            }
-
-            else if (other.getTypeBook() != null) {
+            } else if (other.getTypeBook() != null) {
                 typeBook = other.getTypeBook();
             }
         }
