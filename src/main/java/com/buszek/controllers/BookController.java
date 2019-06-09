@@ -19,26 +19,26 @@ public class BookController {
 
     @GetMapping("/books")
     public List<Book> getAllBooks() {
-        return booksService.findAll();
+        return booksService.findAllBook();
     }
 
     @GetMapping("/books/{id}")
     public Book getBook(@PathVariable long id) {
-        return booksService.findById(id);
+        return booksService.findBookById(id);
     }
 
     @PostMapping("/books")
     public Book addBook(@RequestBody Book book) {
-        return booksService.save(book);
+        return booksService.saveBook(book);
     }
 
     @PutMapping("/books/{id}")
     public Book updateBook(@PathVariable long id, @RequestBody Book book) {
-        return booksService.update(id, book);
+        return booksService.updateBook(id, book);
     }
 
     @DeleteMapping("/books/{id}")
     public Book deleteBook(@PathVariable long id) {
-        return booksService.delete(id);
+        return booksService.deleteBook(id);
     }
 }

@@ -19,26 +19,26 @@ public class StubBookRepository implements BookService {
     }
 
     @Override
-    public List<Book> findAll() {
+    public List<Book> findAllBook() {
         return new ArrayList<>(books.values());
     }
 
     @Override
-    public Book findById(long id) {
+    public Book findBookById(long id) {
         return books.get(id);
     }
 
     @Override
-    public Book save(Book book) {
+    public Book saveBook(Book book) {
         book.setId(getNextId());
         books.put(book.getId(), book);
         return book;
     }
 
     @Override
-    public Book update(long id, Book book) {
+    public Book updateBook(long id, Book book) {
 
-        final Book bookToUpdate = findById(id);
+        final Book bookToUpdate = findBookById(id);
 
         if (bookToUpdate == null) {
             return null;
@@ -49,7 +49,7 @@ public class StubBookRepository implements BookService {
     }
 
     @Override
-    public Book delete(long id) {
+    public Book deleteBook(long id) {
 
         if (books.containsKey(id)) {
             return books.remove(id);

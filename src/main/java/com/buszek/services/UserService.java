@@ -5,13 +5,13 @@ import java.util.List;
 
 public interface UserService {
 
-    List<User> findAll();
+    List<User> findAllUser();
 
-    User findById(long id);
+    User findUserById(long id);
 
-    User save(User user);
+    User saveUser(User user);
 
-    User update(long id, User user);
+    User updateUser(long id, User user);
 
-    User delete(long id);
+    User deleteUser(long id);
 }
