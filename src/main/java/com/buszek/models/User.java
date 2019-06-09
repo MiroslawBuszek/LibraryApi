@@ -11,7 +11,6 @@ public class User {
     String name;
     String surname;
     String nick;
-    String password;
     String email;
 
     public void updateUser (User other) {
@@ -24,8 +23,6 @@ public class User {
                 surname = other.getSurname();
             } else if (other.getNick() != null) {
                 nick = other.getNick();
-            } else if (other.getPassword() != null) {
-                password = other.getPassword();
             } else if (other.getEmail() != null) {
                 email = other.getEmail();
             }

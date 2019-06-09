@@ -3,7 +3,6 @@ package com.buszek.services;
 import com.buszek.models.Book;
 import java.util.List;
 
-
 public interface BookService {
 
     List<Book> findAllBook();
