@@ -44,7 +44,7 @@ public class StubBookRepository implements BookService {
             return null;
         }
 
-        bookToUpdate.update(book);
+        bookToUpdate.updateBook(book);
         return bookToUpdate;
     }
 

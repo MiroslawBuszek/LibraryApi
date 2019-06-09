@@ -14,7 +14,7 @@ public class Book {
     String publisher;
     String typeBook;
 
-    public void update(Book other) {
+    public void updateBook (Book other) {
 
         if (other != null) {
 
